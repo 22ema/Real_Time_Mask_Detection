@@ -2,7 +2,7 @@ import cv2
 from inference.inference import *
 
 def video_inference(video_file):
-    cap = cv2.VideoCapture(video_file)
+    cap = cv2.VideoCapture(0)
     model = setting_model()
     if cap.isOpened():
         while True:
