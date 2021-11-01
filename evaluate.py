@@ -32,7 +32,7 @@ if __name__ == "__main__":
     recall_list = []
     count = 0
     model = setting_model(cfg, weights)
-    for i in range(10, 100, 10):
+    for i in range(10, 100, 5):
         iou_thr = 0.5
         thr = i/100
         precision = 0
@@ -55,10 +55,6 @@ if __name__ == "__main__":
                 precision_value, recall_value = compute_pr_rec(TP, FP, FN)
                 precision += precision_value
                 recall += recall_value
-                print("Precision:", precision_value)
-                print("Recall:", recall_value)
         precision_list.append(precision/len(test_annotation_list))
         recall_list.append(recall/len(test_annotation_list))
-        print("Precision:", precision/len(test_annotation_list))
-        print("Recall:", recall/len(test_annotation_list))
     make_pr_graph(precision_list, recall_list)
