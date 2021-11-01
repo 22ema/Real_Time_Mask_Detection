@@ -33,6 +33,20 @@ def convert_to_darknet(size, box):
         print(size,box)
     return (x,y,w,h)
 
+def deconvert_to_darknet(size, box):
+    dw = size[0]
+    dh = size[1]
+    x = float(box[0])*dw
+    w = float(box[2])*dw
+    y = float(box[1])*dh
+    h = float(box[3])*dh
+
+    x_1 = x-(w/2)
+    x_2 = x+(w/2)
+    y_1 = y-(h/2)
+    y_2 = y+(h/2)
+    return x_1, y_1, x_2, y_2
+
 def make_without_mask_dataset():
     path = '../media/dataset'
     labels_path = '../media/dataset/annotation'
