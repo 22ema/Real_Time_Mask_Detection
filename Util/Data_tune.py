@@ -1,8 +1,8 @@
 import os
 
 if __name__ == "__main__":
-    path = "../media/dataset/annotation"
-    save_path = '../media/dataset/labels'
+    path = "../media/dataset/test/labels"
+    save_path = '../media/dataset/test/annotation'
     text_list = os.listdir(path)
     for text_file in text_list:
         image_path = os.path.join(path, text_file)
@@ -17,11 +17,11 @@ if __name__ == "__main__":
                         data_list[0] = '1'
                         line = " ".join(data_list)
                         s_f.write(line)
-                    # elif data_list[0] == '1':
-                    #     data_list[0] = '0'
-                    #     line = " ".join(data_list)
-                    #     s_f.write(line)
-                    # else:
-                    #     data_list[0] = '1'
-                    #     line = " ".join(data_list)
-                    #     s_f.write(line)
+                    elif data_list[0] == '1':
+                        data_list[0] = '0'
+                        line = " ".join(data_list)
+                        s_f.write(line)
+                    else:
+                        data_list[0] = '1'
+                        line = " ".join(data_list)
+                        s_f.write(line)
