@@ -1,22 +1,23 @@
 # Real_Time_Mask_Detection
 
 Implementation to Detect Mask in webcam.
+Improve performance by adding datasets.
 
  - Yolor
 
 ## Performance
 
-| Model | Test Size | AP<sup>test</sup> | AP<sub>50</sub><sup>test</sup> | AP<sub>75</sub><sup>test</sup> | batch1 throughput | batch32 inference |
-| :-- | :-: | :-: | :-: | :-: | :-: | :-: |
-| **??** | 1280 | **??%** | **??%** | **??%** | ?? *fps* | ?.? *ms* |
-| **??** | 1280 | **??%** | **??%** | **??%** | ?? *fps* | ??.? *ms* |
-| **??** | 1280 | **??%** | **??%** | **??%** | ?? *fps* | ??.? *ms* |
-|  |  |  |  |  |  |  |
+| Dataset | Test Size | AP<sub>50</sub><sup>test</sup> | AP<sub>75</sub><sup>test</sup> | batch1 throughput |
+| :-- | :-: | :-: | :-: | :-: | :-: |
+| **LMDD(Imbalance dataset)** | 1280 | **??%** | **??%** | ?? *fps* |
+| **??** | 1280 | **??%** | **??%** | ?? *fps* |
+| **??** | 1280 | **??%** | **??%** | ?? *fps* |
+|  |  |  |  |  |
 
 
 ## Installation
  - python version : 3.6.9
- - pip install -r requirements.txt
+ - pip3 install -r requirements.txt
  
 ## Inference
  - download wights and cfg file
