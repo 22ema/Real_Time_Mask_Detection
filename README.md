@@ -8,7 +8,7 @@ Improve performance by adding datasets.
 ## Performance
 
 | Dataset | Test Size | AP<sub>50</sub><sup>test</sup> | AP<sub>75</sub><sup>test</sup> | batch1 throughput |
-| :-- | :-: | :-: | :-: | :-: | :-: |
+| :-- | :-: | :-: | :-: | :-: | --: |
 | **LMDD(Imbalance dataset)** | 1280 | **??%** | **??%** | ?? *fps* |
 | **??** | 1280 | **??%** | **??%** | ?? *fps* |
 | **??** | 1280 | **??%** | **??%** | ?? *fps* |
