@@ -33,6 +33,7 @@ Implementation to Detect Mask in webcam.
 <details><summary> <b>Expand</b> </summary>
 
 * [https://github.com/WongKinYiu/yolor.git](https://github.com/WongKinYiu/yolor.git)
-
+* [https://www.kaggle.com/andrewmvd/face-mask-detection](https://www.kaggle.com/andrewmvd/face-mask-detection)
+* [https://github.com/X-zhangyang/Real-World-Masked-Face-Dataset](https://github.com/X-zhangyang/Real-World-Masked-Face-Dataset)
 
 </details>
