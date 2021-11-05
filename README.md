@@ -3,13 +3,19 @@
 Implementation to Detect Mask in webcam.
 Improve performance by adding datasets.
 
+## Model
  - Yolor
+
+## Dataset
+ - FMDD(LARXEL'S FACEMASK DETECTION DATASET)
+ - RMFRD(REAL-WORLD MASKED FACE RECOGNITION DATASET/REAL-WORLD MASKED FACE DATASET)
+ - COCO DATASET[PERSON]
 
 ## Performance
 
 | Dataset | Test Size | AP<sub>50</sub><sup>test</sup> | AP<sub>75</sub><sup>test</sup> | batch1 throughput |
 | :-- | :-: | :-: | :-: | :-: |
-| **LMDD(Imbalance dataset)** | 1280 | **??%** | **??%** | ?? *fps* |
+| **FMDD(Imbalance dataset)** | 1280 | **??%** | **??%** | ?? *fps* |
 | **??** | 1280 | **??%** | **??%** | ?? *fps* |
 | **??** | 1280 | **??%** | **??%** | ?? *fps* |
 
