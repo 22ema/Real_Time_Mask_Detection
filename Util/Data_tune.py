@@ -1,8 +1,8 @@
 import os
 
 if __name__ == "__main__":
-    path = "../media/dataset/test/labels"
-    save_path = '../media/dataset/test/annotation'
+    path = "../media/dataset/AFDB_annotation"
+    save_path = '../media/dataset/AFDB_COCO_annotation'
     text_list = os.listdir(path)
     for text_file in text_list:
         image_path = os.path.join(path, text_file)
