@@ -3,8 +3,6 @@
 Implementation to Detect Mask in webcam.
 
  - Yolor
- - Yolov4
- - EfficientDet
 
 ## Performance
 
@@ -13,17 +11,22 @@ Implementation to Detect Mask in webcam.
 | **??** | 1280 | **??%** | **??%** | **??%** | ?? *fps* | ?.? *ms* |
 | **??** | 1280 | **??%** | **??%** | **??%** | ?? *fps* | ??.? *ms* |
 | **??** | 1280 | **??%** | **??%** | **??%** | ?? *fps* | ??.? *ms* |
-| **??** | 1280 | **??%** | **??%** | **??%** | ?? *fps* | ??.? *ms* |
-| **??** | 1280 | **??%** | **??%** | **??%** | ?? *fps* | ??.? *ms* |
 |  |  |  |  |  |  |  |
-| **??** | 896 | **??%** | **??%** | **??%** | ?? *fps* | - |
-| **??** | 1280 | **??%** | **??%** | **??%** | ?? *fps* | - |
-| **??** | 1536 | **??%** | **??%** | **??%** | ?? *fps* | - |
-|  |  |  |  |  |  |  |
+
 
 ## Installation
-
+ - python version : 3.6.9
+ - pip install -r requirements.txt
+ 
 ## Inference
+ - download wights and cfg file
+ - save in model directory
+ - python3 run.py
+ 
+## Evaluate
+ - download testdataset and annotation_path, weights, cfg file
+ - save in dataset directory and model directory
+ - python3 evaluate.py 
 
 ## References
 
