@@ -15,9 +15,9 @@ Improve performance by adding datasets.
 
 | Dataset | Test Size | AP<sub>50</sub><sup>test</sup> | AP<sub>75</sub><sup>test</sup> | batch1 throughput |
 | :-- | :-: | :-: | :-: | :-: |
-| **FMDD(Imbalance dataset)** | 1280 | **??%** | **??%** | ?? *fps* |
-| **??** | 1280 | **??%** | **??%** | ?? *fps* |
-| **??** | 1280 | **??%** | **??%** | ?? *fps* |
+| **FMDD(Imbalance dataset)** | 1280 | **5%** | **??%** | 46 *fps* |
+| **FMDD + COCO** | 1280 | **11%** | **??%** | 46 *fps* |
+| **FMDD + COCO + RFMRD** | 1280 | **13%** | **??%** | 46 *fps* |
 
 
 
