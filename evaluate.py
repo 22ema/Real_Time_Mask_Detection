@@ -50,7 +50,7 @@ def make_pr_graph(precision_list, recall_list, flag):
     plt.savefig('./result/{}_Precision_Recall_graph.png'.format(flag),dpi=300)
     plt.close()
 
-def evaluate_make(dataset_path, annotation_path, weights,cfg):
+def evaluate_make(dataset_path, annotation_path, weights,cfg, classes):
     '''
     To evaluate object detection model
     :param dataset_path: test dataset path
@@ -61,7 +61,6 @@ def evaluate_make(dataset_path, annotation_path, weights,cfg):
     test_annotation_list = os.listdir(annotation_path)
     annotation_list = []
     prediction_list = []
-    classes = [0, 1]
     # model setting
     model = setting_model(cfg, weights)
     iou_thr = 0.5
@@ -81,19 +80,20 @@ def evaluate_make(dataset_path, annotation_path, weights,cfg):
     # make graph
     make_pr_graph(result[0]['precision'], result[0]['recall'], 0)
     make_pr_graph(result[1]['precision'], result[1]['recall'], 1)
-    # make_pr_graph(result[2]['precision'], result[2]['recall'], 2)
+    make_pr_graph(result[2]['precision'], result[2]['recall'], 2)
     # make_pr_graph(result[0]['interpolated precision'], result[0]['interpolated recall'], 0)
     # make_pr_graph(result[1]['interpolated precision'], result[1]['interpolated recall'], 1)
     # make_pr_graph(result[2]['interpolated precision'], result[2]['interpolated recall'],2)
     mAP = computeMap(result)
-    print(mAP)
+    print("mAP : {}".format(mAP))
 
 if __name__ == "__main__":
     '''
     evaluate object detection model
     '''
     dataset_path = "./media/dataset/test/images"
-    annotation_path = "./media/dataset/test/labels"
-    weights = './model/yolor/new_class_1_2/best_ap50.pt'
+    annotation_path = "./media/dataset/test/old_labels"
+    weights = './model/yolor/FMDD/best_ap50.pt'
     cfg = './Yolor/cfg/yolor_p6.cfg'
-    evaluate_make(dataset_path, annotation_path, weights,cfg)
+    classes = [0, 1, 2]
+    evaluate_make(dataset_path, annotation_path, weights,cfg, classes)

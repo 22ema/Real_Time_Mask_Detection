@@ -116,8 +116,6 @@ def computeAP(prediction_list, annotation_list, classes, iou_thr):
         acc_TP = np.cumsum(TP)
         rec = acc_TP / gt_num
         prec = np.divide(acc_TP, (acc_FP + acc_TP))
-        print("{} rec:".format(c), rec)
-        print("{} prec:".format(c), prec)
         [ap, mpre, mrec, _] = ElevenPointInterpolatedAP(rec, prec)
         r = {
             'class': c,

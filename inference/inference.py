@@ -39,7 +39,7 @@ def inference(ori_image, model):
     # img = img.float()  # uint8 to fp16/32
     with torch.no_grad():
         inf_out, train_out = model(img)
-        output = non_max_suppression(inf_out, conf_thres=0.3, iou_thres=0.5)
+        output = non_max_suppression(inf_out, conf_thres=0.5, iou_thres=0.5)
     return output, img
 
 def post_processing(output, ori_image, trans_image):

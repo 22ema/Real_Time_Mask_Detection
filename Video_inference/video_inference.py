@@ -22,4 +22,5 @@ def video_inference(video_file, weigths, cfg):
     else:
         print("can't open video.")
     cap.release()
+    out.release()
     cv2.destroyAllWindows()

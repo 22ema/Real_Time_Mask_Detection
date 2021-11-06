@@ -9,7 +9,7 @@ if __name__ =="__main__":
     cfg = model configuration file link
     video = video_link(webcam : 0)
     '''
-    weights = './model/yolor/new_class_1_2/best_ap50.pt'
+    weights = './model/yolor/FMDD+COCO+RMFRD(Mask_NoMask)/best_ap50.pt'
     cfg = './Yolor/cfg/yolor_p6.cfg'
     video = 0
     video_inference(video, weights, cfg)

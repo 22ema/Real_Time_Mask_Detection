@@ -7,3 +7,5 @@
 *.pt
 *.txt
 *.json
+*.jpeg
+!requirements.txt
